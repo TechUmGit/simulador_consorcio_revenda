@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Simulador de Consórcio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Link para o Manifest do PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Configurações e Ícone para iOS (Safari) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#02216B">
+    <meta name="apple-mobile-web-app-title" content="Consórcio">
+    <link rel="apple-touch-icon" href="logo_app_consorcio.png">
+
     <style>
         body {
             background-color: #f1f5f9;
@@ -222,6 +232,13 @@
 
         // Inicialização padrão com os valores da tela
         window.addEventListener('DOMContentLoaded', updateSimulation);
+    </script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then(() => console.log('PWA ativo com sucesso!'))
+          .catch(err => console.log('Erro no PWA:', err));
+      }
     </script>
 </body>
 </html>

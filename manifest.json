@@ -1,0 +1,17 @@
+{
+  "name": "Simulador de Consórcio",
+  "short_name": "Consórcio",
+  "description": "Simulador inteligente de consórcios e lances.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#02216B",
+  "theme_color": "#02216B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo_app_consorcio.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
